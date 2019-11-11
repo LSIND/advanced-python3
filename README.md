@@ -14,7 +14,7 @@ Projects covering Advanced Python using **Python3.7**
 - fetching html data
 
 
-## [Classes in Python: association](https://github.com/LSIND/intro-to-python3-analysis/tree/master/ClassesAssociation)
+## [Classes in Python: association](https://github.com/LSIND/advanced-python3/tree/master/ClassesAssociation)
 > *Using built-in capabilities for string data processing*
 
 Create a project which simulates shuffling of card deck (52 cards).
