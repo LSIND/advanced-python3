@@ -21,13 +21,14 @@ Create a project which simulates shuffling of card deck (52 cards).
 
 Class Card:
  - 2 fields: suit and rank 
- - constructor `__init__` sets the Card
- - overrided `__str__` method prints card name, f.e. "jack of hearts"
+ - constructor `__init__(self, suit, rank)` sets the Card
+ - overrided `__str__(self)` method prints card name, f.e. "jack of hearts"
 
 Class Deck:
+- contains two lists of ranks and suits
 - creates list of 52 objects of class Card
-- constructor `__init__` sets the Deck
+- constructor `__init__(self)` sets the Deck
 - method `shuffle(self)` shuffles cards in Deck using random
-- overrided `__str__` method prints all cards f a deck
+- overrided `__str__(self)` method prints all cards in a deck
 
 ![UML class diagram](https://www.dropbox.com/s/4h1fwijt5k6uwwk/cards.JPG?raw=1)
