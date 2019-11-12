@@ -7,4 +7,4 @@ class Square(Rectangle):
     """Represents class Square."""
     def __init__(self, width):
         self._name = 'Square'
-        Rectangle.__init__(self, width, width)
+        Rectangle.__init__(self, width, width) # calling constructor of base class
