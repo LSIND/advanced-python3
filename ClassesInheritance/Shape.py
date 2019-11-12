@@ -3,7 +3,7 @@
 
 class Shape:
     """Represents a base class Shape."""
-    _name = 0
+    _name = 'no name (base)'
     _area = 0
     _perim = 0
 
