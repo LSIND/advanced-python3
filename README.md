@@ -62,3 +62,19 @@ Class Square:
 
 
 ![UML class diagram](https://www.dropbox.com/s/gsvysyhc35drt1s/Shapes.JPG?raw=1)
+
+## [Abstract classes and interfaces in Python](https://github.com/LSIND/advanced-python3/tree/master/AbstractAndInterface)
+> *Declaration of abstract class and interface in python3*
+
+Class HotDrink (abstract):
+
+Interface ICup:
+
+Class Coffee:
+
+Class Tea:
+
+## [Python + SQLite Database](https://github.com/LSIND/advanced-python3/tree/master/PythonSqlite)
+> *Creating an sqlite database using python*
+
+Check database structure with [DB Browser for SQLite](https://sqlitebrowser.org/)
