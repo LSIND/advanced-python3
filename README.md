@@ -15,7 +15,7 @@ Projects covering Advanced Python using **Python3.7**
 
 
 ## [Classes in Python: association](https://github.com/LSIND/advanced-python3/tree/master/ClassesAssociation)
-> *Using built-in capabilities for string data processing*
+> *Classes association*
 
 Create a project which simulates shuffling of card deck (52 cards).
 
@@ -32,3 +32,33 @@ Class Deck:
 - overrided `__str__(self)` method prints all cards in a deck
 
 ![UML class diagram](https://www.dropbox.com/s/4h1fwijt5k6uwwk/cards.JPG?raw=1)
+
+## [Classes in Python: inheritance](https://github.com/LSIND/advanced-python3/tree/master/ClassesInheritance)
+> *Classes inheritance*
+
+Create a project which simulates shuffling of card deck (52 cards).
+
+Class Shape:
+ - 3 fields: name of figure, area and perimiter
+ - method `ComputePerim(self)` is *virtual-like* to be overrided in derived classes - is not necessary to declare
+ - method `ComputeArea(self)` is *virtual-like* to be overrided in derived classes - is not necessary to declare
+ - overrided `__str__(self)` method prints figure, and its calculated area and perimiter
+ 
+ Class Circle:
+- inherits from Shape
+- constructor `__init__(self, radius)` sets radius of circle
+- overrided method `ComputePerim(self)` calculates the perimeter of circle
+- overrided method `ComputeArea(self)` calculates the area of circle
+
+Class Rectangle:
+- inherits from Shape
+- constructor `__init__(self, width, height)` sets width and height of rectangle
+- overrided method `ComputePerim(self)` calculates the perimeter of rectangle
+- overrided method `ComputeArea(self)` calculates the area of rectangle
+
+Class Square:
+- inherits from Rectangle
+- constructor `__init__(self, width)` sets side of shape and calls the cinstructor of base class rectangle
+
+
+![UML class diagram](https://www.dropbox.com/s/gsvysyhc35drt1s/Shapes.JPG?raw=1)
