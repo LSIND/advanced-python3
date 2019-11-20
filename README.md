@@ -75,6 +75,14 @@ Class Coffee:
 Class Tea:
 
 ## [Python + SQLite Database](https://github.com/LSIND/advanced-python3/tree/master/PythonSqlite)
-> *Creating an sqlite database using python*
+> *Working with sqlite database using python*
+
+SQLite module for python is in a standart library.
 
 Check database structure with [DB Browser for SQLite](https://sqlitebrowser.org/)
+
+
+## [Python + MongoDB](https://github.com/LSIND/advanced-python3/tree/master/PythonMongoDB)
+> *Working with nosql database using python*
+
+`pip install pymongo`
