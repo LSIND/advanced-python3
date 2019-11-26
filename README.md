@@ -7,7 +7,7 @@ This repository presents advanced usage of Python incl OOP implementation, worki
 Projects covering Advanced Python using **Python3.7**
 - understanding classes in Python : association
 - understanding classes in Python : inheritance
-- understanding classes in Python : abstract class and interfaces
+- understanding classes in Python : abstract classes and interfaces
 - creating sqlite database
 - using ORM: SQLAlchemy
 - creating MongoDB database
@@ -66,13 +66,38 @@ Class Square:
 ## [Abstract classes and interfaces in Python](https://github.com/LSIND/advanced-python3/tree/master/AbstractAndInterface)
 > *Declaration of abstract class and interface in python3*
 
-Class HotDrink (abstract):
+ABC (abstract class) is a part of Python Standart Library.  
+As for interfaces, module *zope* can be used.
+```Console
+pip install zope
+```
 
-Interface ICup:
-
-Class Coffee:
-
-Class Tea:
+**Class HotDrink (abstract)**:
+```python
+from abc import ABC, abstractmethod
+```
+**Interface ICup**:
+```python
+from zope.interface import Interface, Attribute
+```
+**Class CupOfCoffee**:  
+implements ICup interface  
+inherits abstract class HotDrink  
+has its own property BeanType: arabica or robusta
+```python
+@implementer(ICup)
+class CupOfCoffee(HotDrink):
+    pass
+```
+**Class CupOfTea**:  
+implements ICup interface  
+inherits abstract class HotDrink  
+has its own property LeafType: green or black
+```python
+@implementer(ICup)
+class CupOfTea(HotDrink):
+    pass
+```
 
 ## [Python + SQLite Database](https://github.com/LSIND/advanced-python3/tree/master/PythonSqlite)
 > *Working with sqlite database using python*
@@ -84,5 +109,6 @@ Check database structure with [DB Browser for SQLite](https://sqlitebrowser.org/
 
 ## [Python + MongoDB](https://github.com/LSIND/advanced-python3/tree/master/PythonMongoDB)
 > *Working with nosql database using python*
-
-`pip install pymongo`
+```Console
+pip install pymongo
+```
