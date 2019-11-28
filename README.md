@@ -135,7 +135,7 @@ rows = soup.select(selector)
 ```
 
 3. Page of current year has a different structure and needed data is placed in `div` block.   
-4. You can find full dataset on my Kaggle page: [Full Moon Calendar 1900-2050](https://www.kaggle.com/lsind18/full-moon-calendar-1900-2050)
+You can find full dataset on my Kaggle page: [Full Moon Calendar 1900-2050](https://www.kaggle.com/lsind18/full-moon-calendar-1900-2050)
 
 
 ## [Python Images Web Scraping](https://github.com/LSIND/advanced-python3/tree/master/GemstonesImages)
@@ -156,12 +156,18 @@ table_gems=soup.find_all('table',{'id':'ctl00_ContentPlaceHolder1_DataList1'})
 ```python
 table_images=soup.find_all('table',{'id':'ctl00_ContentPlaceHolder1_DataList1'})
 ```
-5. You can find full gemstones images dataset from multiple sources on my Kaggle page: [Gemstones Images](https://www.kaggle.com/lsind18/gemstones-images)
+You can find full gemstones images dataset from multiple sources on my Kaggle page: [Gemstones Images](https://www.kaggle.com/lsind18/gemstones-images)
 
 ## [Python + SQLite Database](https://github.com/LSIND/advanced-python3/tree/master/PythonSqlite)
 > *Working with sqlite database using python*
 
-SQLite module for python is in a standart library.
+Python standard library contains the SQLite module.
+
+Create a simple database for [fetched data of Full Moons](https://github.com/LSIND/advanced-python3/tree/master/FullMoonDatetime)
+```python
+import sqlite3
+from sqlite3 import Error
+```
 
 Check database structure with [DB Browser for SQLite](https://sqlitebrowser.org/)
 
