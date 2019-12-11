@@ -62,9 +62,10 @@ Class Square:
 ![UML class diagram](https://www.dropbox.com/s/gsvysyhc35drt1s/Shapes.JPG?raw=1)
 
 ## [Abstract classes and interfaces in Python](https://github.com/LSIND/advanced-python3/tree/master/AbstractAndInterface)
-> *Declaration of abstract class and interface in python3*
+> Declaration of abstract class and interface in python3   
+> *This task and UML class diagram ware taken from C# / Java project to draw an analogy between OOP style of Python and OOP in C# / Java. From this case it's clear that interfaces in Python are a little bit useless: Python has a multiple inheritance, C#/Java - single*
 
-ABC (abstract class) is a part of Python Standart Library.  
+*ABC* (abstract class) is a part of Python Standart Library.  
 As for interfaces, module *zope* can be used.
 ```Console
 pip install zope
@@ -96,6 +97,8 @@ has its own property LeafType: green or black
 class CupOfTea(HotDrink):
     pass
 ```
+
+![UML class diagram](https://www.dropbox.com/s/hq54ixgzff12kip/Abstr_Int.JPG?raw=1)
 
 ## [Python Text Web Scraping](https://github.com/LSIND/advanced-python3/tree/master/FullMoonDatetime)
 > BeautifulSoup + static content   
