@@ -180,3 +180,14 @@ Check database structure with [DB Browser for SQLite](https://sqlitebrowser.org/
 ```Console
 pip install pymongo
 ```
+
+*opt: download and install GUI [Compass](https://www.mongodb.com/products/compass)*
+
+The sample database is [weather.json](https://atlas-data-lake.s3.amazonaws.com/json/sample_weatherdata/data.json). Import data into MongoDB instance and check the collection: Schema -> Analyze
+
+Using Compass check data:
+```Console
+{"airTemperature.value": 3}
+{"airTemperature.value": {$gt: 10}}
+{"wind.type": {$ne: "N"}}
+```
