@@ -1,6 +1,6 @@
 # Advanced Python 3
 
-This repository presents advanced usage of Python incl OOP implementation, working with SQL and NOSQL databases and fetching HTML data.
+This repository presents advanced usage of Python incl OOP (object-oriented programming) implementation, working with relational databases and NOSQL databases + fetching HTML data.
 
 ## Projects
 Projects covering Advanced Python using **Python3.7**
@@ -10,22 +10,20 @@ Projects covering Advanced Python using **Python3.7**
 - fetching html data: BeautifulSoup
 - creating sqlite database
 - using ORM: SQLAlchemy
-- creating MongoDB database
+- working with MongoDB database
 
 ## [Classes in Python: association](https://github.com/LSIND/advanced-python3/tree/master/ClassesAssociation)
 > *Classes association*
 
-Create a project which simulates shuffling of card deck (52 cards).
+Project which simulates shuffling of card deck (52 cards). You should print sorted deck of cards, after shuffle it and print again.
 
 Class Card:
- - 2 fields: suit and rank 
  - constructor `__init__(self, suit, rank)` sets the Card
  - overrided `__str__(self)` method prints card name, f.e. "jack of hearts"
 
 Class Deck:
 - contains two lists of ranks and suits
-- creates list of 52 objects of class Card
-- constructor `__init__(self)` sets the Deck
+- constructor `__init__(self)` sets the Deck: creates list of 52 objects of class Card
 - method `shuffle(self)` shuffles cards in Deck using random
 - overrided `__str__(self)` method prints all cards in a deck
 
@@ -34,13 +32,13 @@ Class Deck:
 ## [Classes in Python: inheritance](https://github.com/LSIND/advanced-python3/tree/master/ClassesInheritance)
 > *Classes inheritance*
 
-Create a project which simulates shuffling of card deck (52 cards).
+Project with class hierarchy: reusing methods of base classes. *In Python it is not necessary to declare virtual methods if they
 
 Class Shape:
- - 3 fields: name of figure, area and perimiter
- - method `ComputePerim(self)` is *virtual-like* to be overrided in derived classes - is not necessary to declare
- - method `ComputeArea(self)` is *virtual-like* to be overrided in derived classes - is not necessary to declare
- - overrided `__str__(self)` method prints figure, and its calculated area and perimiter
+ - 3 default fields: name of figure, area and perimiter
+ - method `ComputePerim(self)` is *virtual-like* to be overrided in derived classes
+ - method `ComputeArea(self)` is *virtual-like* to be overrided in derived classes
+ - overrided `__str__(self)` method prints figure name and its calculated area and perimiter
  
  Class Circle:
 - inherits from Shape
@@ -56,14 +54,14 @@ Class Rectangle:
 
 Class Square:
 - inherits from Rectangle
-- constructor `__init__(self, width)` sets side of shape and calls the cinstructor of base class rectangle
+- constructor `__init__(self, width)` sets side of shape and calls the cinstructor of base class rectangle (constructor chaining).
 
 
 ![UML class diagram](https://www.dropbox.com/s/gsvysyhc35drt1s/Shapes.JPG?raw=1)
 
 ## [Abstract classes and interfaces in Python](https://github.com/LSIND/advanced-python3/tree/master/AbstractAndInterface)
 > Declaration of abstract class and interface in python3   
-> *This task and UML class diagram ware taken from C# / Java project to draw an analogy between OOP style of Python and OOP in C# / Java. From this case it's clear that interfaces in Python are a little bit useless: Python has a multiple inheritance, C#/Java - single*
+> *This task and UML class diagram were taken from C# / Java project to draw an analogy between OOP style in Python and OOP in C#/Java. From this case it's clear that interfaces in Python are a little bit useless: Python has a multiple inheritance, C#/Java - single*
 
 *ABC* (abstract class) is a part of Python Standart Library.  
 As for interfaces, module *zope* can be used.
@@ -75,23 +73,29 @@ pip install zope
 ```python
 from abc import ABC, abstractmethod
 ```
+- 2 protected fields: milk = 3, sugar = 3 (default values for derived classes)
+- 2 abstract properties: Milk, Sugar
+- 3 abstract methods: AddMilk, AddSugar, Drink
+- all class members which have `@abstractmethod` decorator MUST be overrided in child classes.   
 **Interface ICup**:
 ```python
 from zope.interface import Interface, Attribute
 ```
+- 2 properties
+- 2 methods.   
 **Class CupOfCoffee**:  
-implements ICup interface  
-inherits abstract class HotDrink  
-has its own property BeanType: arabica or robusta
+- implements ICup interface  
+- inherits abstract class HotDrink  
+- has its own property BeanType: arabica or robusta
 ```python
 @implementer(ICup)
 class CupOfCoffee(HotDrink):
     pass
 ```
 **Class CupOfTea**:  
-implements ICup interface  
-inherits abstract class HotDrink  
-has its own property LeafType: green or black
+- implements ICup interface  
+- inherits abstract class HotDrink  
+- has its own property LeafType: green or black
 ```python
 @implementer(ICup)
 class CupOfTea(HotDrink):
@@ -102,8 +106,7 @@ class CupOfTea(HotDrink):
 
 ## [Python Text Web Scraping](https://github.com/LSIND/advanced-python3/tree/master/FullMoonDatetime)
 > BeautifulSoup + static content   
-
-Get Full Moon Calendar data from [fullmoon.info web site](https://www.fullmoon.info/en/fullmoon-calendar_1900-2050.html) for 150 years. Every year is presented in separate page:
+> Get Full Moon Calendar data from [fullmoon.info web site](https://www.fullmoon.info/en/fullmoon-calendar_1900-2050.html) for 150 years. Every year is presented in separate page:
 `https://www.fullmoon.info/en/fullmoon-calendar/`X, where X is a year.
 
 1. Install packages:  
@@ -142,9 +145,8 @@ You can find full dataset on my Kaggle page: [Full Moon Calendar 1900-2050](http
 
 
 ## [Python Images Web Scraping](https://github.com/LSIND/advanced-python3/tree/master/GemstonesImages)
-> BeautifulSoup + static content      
-
-Fetch data from [minerals.net](https://www.minerals.net): create folders with gemstones names and download images of them in each coresponding folder.  
+> BeautifulSoup + static content       
+> Fetch data from [minerals.net](https://www.minerals.net): create folders with gemstones names and download images of them in each coresponding folder.  
 
 1. Get the page with [list of all gemstones](https://www.minerals.net/GemStoneMain.aspx) and find HTML-element with them:
 ```python
@@ -162,7 +164,8 @@ table_images=soup.find_all('table',{'id':'ctl00_ContentPlaceHolder1_DataList1'})
 You can find full gemstones images dataset from multiple sources on my Kaggle page: [Gemstones Images](https://www.kaggle.com/lsind18/gemstones-images)
 
 ## [Python + SQLite Database](https://github.com/LSIND/advanced-python3/tree/master/PythonSqlite)
-> *Working with sqlite database using python*
+> *Working with sqlite database using python*  
+> create table and insert data fetched from [fullmoon.info web site](https://www.fullmoon.info/en/fullmoon-calendar_1900-2050.html) into sqlite database.
 
 Python standard library contains the SQLite module.
 
@@ -174,20 +177,22 @@ from sqlite3 import Error
 
 Check database structure with [DB Browser for SQLite](https://sqlitebrowser.org/)
 
-
-## [Python + MongoDB](https://github.com/LSIND/advanced-python3/tree/master/PythonMongoDB)
-> *Working with nosql database using python*
+## [Python + MongoDB](https://github.com/LSIND/advanced-python3/tree/master/mongodbCRUD)
+> *Working with nosql database using python*  
+> basic operations working with MongoDB using pymongo.
 ```Console
 pip install pymongo
 ```
-
 *opt: download and install GUI [Compass](https://www.mongodb.com/products/compass)*
 
-The sample database is [weather.json](https://atlas-data-lake.s3.amazonaws.com/json/sample_weatherdata/data.json). Import data into MongoDB instance and check the collection: Schema -> Analyze
+The sample database is [weather.json](https://atlas-data-lake.s3.amazonaws.com/json/sample_weatherdata/data.json). Import data into MongoDB instance and check the collection: **Schema -> Analyze**.  
 
-Using Compass check data:
+Using Compass check data:  
 ```Console
 {"airTemperature.value": 3}
 {"airTemperature.value": {$gt: 10}}
 {"wind.type": {$ne: "N"}}
+{"atmosphericPressureChange" : {$exists: true}}
 ```
+
+Simple examples of CRUD operations in MongoDB using pymongo: ```insert_one (insert_many), find, update_one (update_many), delete_one (delete_many)```. All these methods expect dictionary as a parameter(s).
