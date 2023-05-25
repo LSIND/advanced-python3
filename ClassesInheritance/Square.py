@@ -4,7 +4,7 @@
 from Rectangle import Rectangle
 
 class Square(Rectangle):
-    """Represents class Square."""
-    def __init__(self, width):
+    '''Represents class Square.'''
+    def __init__(self, side):        
+        Rectangle.__init__(self, side, side) # calling constructor of base class
         self._name = 'Square'
-        Rectangle.__init__(self, width, width) # calling constructor of base class

@@ -7,6 +7,7 @@ class HotDrink(ABC):
     '''abstract class'''
     _sugar = 3
     _milk = 3
+    
     @property
     @abstractmethod
     def Sugar(self, sugar):

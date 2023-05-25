@@ -13,12 +13,12 @@ def processcup(drink):
     drink.Refill()
 
 if __name__ == '__main__':
-    x = int(input("choose your drink: 1 - Coffee, 2 - Tea "))
+    x = int(input('choose your drink: 1 - Coffee, 2 - Tea '))
     if(x==1):
         c = CupOfCoffee('robusta')
         processcup(c)
     elif (x==2):
-        t = CupOfTea('green')
+        t = CupOfTea('test leaf')
         processcup(t)
     else:
         print('there is no such drink')

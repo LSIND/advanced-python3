@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+from zope.interface import implementer
 from HotDrink import HotDrink
 from ICup import ICup
-from zope.interface import implementer
 
 @implementer(ICup)
 class CupOfCoffee(HotDrink):
@@ -11,6 +11,9 @@ class CupOfCoffee(HotDrink):
     def __init__(self, bean = 'arabica'):
         if(bean=='arabica' or bean=='robusta'):
             self.__bean = bean
+        else:
+            self.__bean = 'arabica'
+            print(f'{bean} is not an available bean type. Setting default: {self.__bean}')
 
 #override block
     def Milk(self, milk):
@@ -24,14 +27,14 @@ class CupOfCoffee(HotDrink):
         return self._sugar
 
     def Drink(self):
-        print("Drink your coffee: ", self.__bean)
+        print(f'Drink your coffee: {self.__bean}')
     def AddMilk(self):
-        print("Added milk to coffee: ", self._milk)
+        print(f'Added milk to coffee: {self._milk}')
     def AddSugar(self):
-        print("Added sugar to coffee: ", self._sugar)
+        print(f'Added sugar to coffee: {self._sugar}')
 
 #implementation block
-    __type = "plastic"
+    __type = 'plastic'
     __vol = 0.2
     
     @property
@@ -49,6 +52,6 @@ class CupOfCoffee(HotDrink):
         self.__vol= v
     
     def Refill(self):
-        print("Refill cup of coffee volume", self.__vol)
+        print(f'Refill cup of COFFEE volume {self.__vol}')
     def Wash(self):
-        print("Wash cup of coffee made of ", self.__type)
+        print(f'Wash cup of COFFEE made of {self.__type}')

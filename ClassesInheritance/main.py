@@ -6,7 +6,7 @@ from Circle import Circle
 from Square import Square
 
 if __name__ == '__main__':
-    print("All shapes: ")
+    print('All shapes: ')
     r = Rectangle(20, 40)
     r.ComputeArea()
     r.ComputePerim()
