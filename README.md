@@ -3,7 +3,7 @@
 This repository presents advanced usage of Python incl OOP (object-oriented programming) implementation, working with relational databases and NOSQL databases + fetching HTML data.
 
 ## Projects
-Projects covering Advanced Python using **Python3.7**
+Projects covering Advanced Python using **Python3.7** (**Reviewed on 3.11**).
 - classes in Python : association
 - classes in Python : inheritance
 - classes in Python : abstract classes and interfaces
@@ -142,8 +142,7 @@ pip install requests
 We need to get `class="table-calendar"`.
 
 3. You can find full csv dataset on my Kaggle page: [Full Moon Calendar 1900-2050](https://www.kaggle.com/lsind18/full-moon-calendar-1900-2050)
-4. Before inserting data into database we need to convert date and time in one object: 5 January 1901 1:13:24 am -> 1901-01-05 01:13:24
-
+4. Before inserting data into database we need to convert date and time in one object: `5 January 1901 1:13:24 am -> 1901-01-05 01:13:24`.
 
 ## [Python Images Web Scraping](https://github.com/LSIND/advanced-python3/tree/master/GemstonesImages)
 > BeautifulSoup + static content       
@@ -166,22 +165,22 @@ table_images=soup.find_all('table',{'id':'ctl00_ContentPlaceHolder1_DataList1'})
 ```
 You can find full gemstones images dataset from multiple sources on my Kaggle page: [Gemstones Images](https://www.kaggle.com/lsind18/gemstones-images)
 
+## [Youtube Video Web Scraping](https://github.com/LSIND/advanced-python3/tree/master/YoutubeVideoParse)
+> BeautifulSoup + dynamic content       
+> Fetch data about any Youtube video
+
+1. Create a text file with a list of links to youtube videos.  
+2. Parse every web-page and get title, description, channel_name, channel_url, date_published. 
+
 ## [Gismeteo Web Scraping + SQLAlchemy](https://github.com/LSIND/advanced-python3/tree/master/GismeteoSqlAlchemy)
 > BeautifulSoup + SQLite       
 > Fetch data from [gismeteo.ru](https://www.gismeteo.ru): city + period and put it into database using ORM sqlalchemy v2
 
-1. Install packages:  
-```Console
-pip install beautifulsoup4
-pip install sqlalchemy
-```
-
-2. Get example page [weather in Moscow 14 days](https://www.gismeteo.ru/weather-moscow-4368/2-weeks/) and find HTML-element with class `widget-items`.
-3. Get day of week, date, description, temperature (max), temperature (min), wind (m/s), wind direction, precipitation, humidity, radiation.
-4. Create class Weather with corresponding fields.
-5. Create SqlAlchemy Engine (connection), SqlAlchemy Table with 10 columns and mapper between class Weather and SqlAlchemy Table.
-6. Process data from site to be string, date, float etc and put it into database. Aware of duplicates.
-
+1. Get example page [weather in Moscow 14 days](https://www.gismeteo.ru/weather-moscow-4368/2-weeks/) and find HTML-element with class `widget-items`.
+2. Get day of week, date, description, temperature (max), temperature (min), wind (m/s), wind direction, precipitation, humidity, radiation.
+3. Create class Weather with corresponding fields.
+4. Create SqlAlchemy Engine (connection), SqlAlchemy Table with 10 columns and mapper between class Weather and SqlAlchemy Table.
+5. Process data from site to be string, date, float etc and put it into database. Aware of duplicates.
 
 ## [Python + MongoDB](https://github.com/LSIND/advanced-python3/tree/master/MongoDbProvider)
 > *Working with nosql database using python*  
