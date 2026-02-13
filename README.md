@@ -172,6 +172,12 @@ You can find full gemstones images dataset from multiple sources on my Kaggle pa
 1. Create a text file with a list of links to youtube videos.  
 2. Parse every web-page and get title, description, channel_name, channel_url, date_published. 
 
+## [Habr Career Web Scraping](https://github.com/LSIND/advanced-python3/tree/master/HabrCareer)
+> BeautifulSoup + dynamic content       
+> Fetch vacancies on search query
+
+1. Parse [Habr Career](https://career.habr.com) and get title, company name, rating, salary, skills, url. 
+
 ## [Gismeteo Web Scraping + SQLAlchemy](https://github.com/LSIND/advanced-python3/tree/master/GismeteoSqlAlchemy)
 > BeautifulSoup + SQLite       
 > Fetch data from [gismeteo.ru](https://www.gismeteo.ru): city + period and put it into database using ORM sqlalchemy v2

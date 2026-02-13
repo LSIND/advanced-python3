@@ -167,6 +167,16 @@ resp = requests.get(page)
 table_images=soup.find_all('table',{'id':'ctl00_ContentPlaceHolder1_DataList1'})
 ```
 
+## [Парсинг Habr Career](https://github.com/LSIND/advanced-python3/tree/master/HabrCareer)
+> BeautifulSoup + dynamic content       
+> Cобирает информацию о вакансиях с сайта Habr Career и представляет её в виде объектов класса.
+
+1. Принимает поисковый запрос (например, "аналитик")
+2. Отправляет GET-запрос к https://career.habr.com/vacancies?q={запрос} 
+3. Парсит HTML-страницу с помощью BeautifulSoup
+4. Извлекает информацию по каждой вакансии
+5. Создаёт экземпляры класса Vacancy и помещает их в список
+
 ## [Gismeteo Web Scraping + SQLAlchemy](https://github.com/LSIND/advanced-python3/tree/master/GismeteoSqlAlchemy)
 > BeautifulSoup + SQLite       
 > Получение данных из [gismeteo.ru](https://www.gismeteo.ru): город + период. Сохранение данных в БД с помощью ORM sqlalchemy v2
